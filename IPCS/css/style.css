@@ -1,0 +1,190 @@
+#notation_AA {
+    /*   float: left; */
+    /*   width: 400px; */
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.map_object {
+    height: 32px;
+    width: 32px;
+    z-index: 2;
+}
+
+.pencels {
+    height: 48px;
+    width: 48px;
+}
+
+.selected_icon {
+    border: 4px solid blueviolet;
+}
+
+#map {
+    border: 1px solid black;
+    height: 100%;
+    position: relative;
+}
+
+#map_image {
+    /* z-index: -1; */
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* position: relative; */
+    z-index: 0;
+}
+
+#map_image_place {
+    /* Layer 0 - for map image */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#drawingCanvas {
+    position: absolute;
+    /* border: 3px solid rgb(189, 6, 6); */
+    z-index: 5;
+}
+
+#icon_place {
+    /* Layer 1 - for icons */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+#delete_icon {
+    width: 40px;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+}
+
+.mg-aaa {
+    max-height: 30vh;
+    /* overflow-x: auto; */
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+.bg {
+    /* The image used */
+    /* background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg"); */
+    /* background-image: url("img/bg.jpg"); */
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.map-container-3 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container-3 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+
+.scroll {
+    max-height: 50vh;
+}
+
+
+/* ZOOM */
+
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #AEB6BF;
+    /* border-radius: 50%; */
+    cursor: none;
+    /*Установите размер увеличительного стекла:*/
+    width: 500px;
+    height: 500px;
+    z-index: 3;
+}
+
+
+/* Icon animation */
+
+
+.inMap {
+    transform: scale3d(1, 1, 1);
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+}
+
+.inMap.selected {
+    animation-name: rubberBand;
+    background-color: #4285f4 !important;
+    border: 5px solid green;
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+
+
+/*  on off zoom */
+
+.toggle.ios,
+.toggle-on.ios,
+.toggle-off.ios {
+    border-radius: 20rem;
+}
+
+.toggle.ios .toggle-handle {
+    border-radius: 20rem;
+}

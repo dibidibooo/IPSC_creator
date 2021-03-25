@@ -1,0 +1,915 @@
+<!DOCTYPE HTML>
+<html class="loading semi-dark-layout" lang="en" data-layout="semi-dark-layout" data-textdirection="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html">
+    <link rel="icon" href="img/icons/logo.ico" type="image/x-icon">
+
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/file-uploaders/dropzone.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/wizard/bs-stepper.min.css">
+    <!-- END: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/dragula.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-file-uploader.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/app-todo.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-quill-editor.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-flat-pickr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-wizard.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <title>IPSC CREATOR</title>
+</head>
+
+
+
+<body class="bg vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
+    data-menu="vertical-menu-modern" data-col="">
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+
+
+
+
+
+
+
+
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="#"><span class="brand-logo">
+                            <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
+                                <defs>
+                                    <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%"
+                                        y2="89.4879456%">
+                                        <stop stop-color="#000000" offset="0%"></stop>
+                                        <stop stop-color="#FFFFFF" offset="100%"></stop>
+                                    </lineargradient>
+                                    <lineargradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%"
+                                        x2="37.373316%" y2="100%">
+                                        <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
+                                        <stop stop-color="#FFFFFF" offset="100%"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Artboard" transform="translate(-400.000000, -178.000000)">
+                                        <g id="Group" transform="translate(400.000000, 178.000000)">
+                                            <path class="text-primary" id="Path"
+                                                d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z"
+                                                style="fill:currentColor"></path>
+                                            <path id="Path1"
+                                                d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z"
+                                                fill="url(#linearGradient-1)" opacity="0.2"></path>
+                                            <polygon id="Path-2" fill="#000000" opacity="0.049999997"
+                                                points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325">
+                                            </polygon>
+                                            <polygon id="Path-21" fill="#000000" opacity="0.099999994"
+                                                points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338">
+                                            </polygon>
+                                            <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.099999994"
+                                                points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288">
+                                            </polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg></span>
+                        <h2 class="brand-text">IPSC creator</h2>
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i
+                            class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
+                            class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary"
+                            data-feather="disc" data-ticon="disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+
+
+
+
+
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">3D editor</span><i
+                        data-feather="more-horizontal"></i>
+                </li>
+                <li class=" nav-item active"><a class="d-flex align-items-center" href="threejs/editor/index.html"><i
+                            data-feather="box"></i>
+                        <span class="menu-title text-truncate" data-i18n="Email">Войти в редактор</span></a>
+                </li>
+                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Информация</span><i
+                        data-feather="more-horizontal"></i>
+                </li>
+                <div class="add-task">
+                    <button type="button" class="btn btn-primary btn-block menu-title text-truncate" data-toggle="modal"
+                        data-target="#main_info_modal">
+                        Данные турнира
+                    </button>
+                </div><br>
+                <div class="add-task">
+                    <button type="button" class="btn btn-primary btn-block menu-title text-truncate" data-toggle="modal"
+                        data-target="#plan_modal">
+                        Данные брифинга <br>упражнения
+                    </button>
+                </div><br>
+                <div class="add-task">
+                    <button type="button" class="btn btn-primary btn-block menu-title text-truncate" data-toggle="modal"
+                        data-target="#contact_modal">
+                        Судьи
+                    </button>
+                </div><br>
+                <div class="add-task">
+                    <button type="button" class="btn btn-primary btn-block menu-title text-truncate" data-toggle="modal"
+                        data-target="#new_stroy_modal">
+                        Строевая записка
+                    </button>
+                </div><br>
+                <div class="add-task">
+                    <button type="button" class="btn btn-primary btn-block menu-title text-truncate" data-toggle="modal"
+                        data-target="#meteo_modal">
+                        Метео условия
+                    </button>
+                </div>
+
+
+
+
+
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class=" app-content content ">
+        <div class=" content-wrapper">
+            <div class="content-body">
+
+                <div class="tab-content" id="myTabContent">
+                    <!-- Информация -->
+                    <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+                        <!-- Основные данные -->
+                        <div class="modal fade" id="main_info_modal" tabindex="-1" role="dialog"
+                            aria-labelledby="main_info_modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="main_info_modalLabel">Данные турнира</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="match_info_app">
+                                            <div class="form-group">
+                                                <label class="form-label active">Название турнира:</label>
+                                                <input type="text" placeholder="Название турнира" class="form-control"
+                                                    v-model="main_info.match_name">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Дата начала</label>
+                                                <input type="date" placeholder="ДД.ММ.ГГГГ" class="form-control"
+                                                    v-model="main_info.from_date">
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Дата окончания</label>
+                                                <input type="date" placeholder="ДД.ММ.ГГГГ" class="form-control"
+                                                    v-model="main_info.to_date">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label active">Место проведения</label>
+                                                <input type="text" placeholder="Место проведения" class="form-control"
+                                                    v-model="main_info.location">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Уровень матча</label>
+                                                <select class="custom-select" v-model="main_info.match_level">
+                                                    <option value="1" selected="">I</option>
+                                                    <option value="2">II</option>
+                                                    <option value="3">III</option>
+                                                    <option value="4">IV</option>
+                                                    <option value="5">V</option>
+                                                    <option value="6">VI</option>
+                                                    <option value="7">-</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Оружие</label>
+                                                <select class="custom-select" v-model="main_info.gun">
+                                                    <option value="Пистолет">Пистолет</option>
+                                                    <option value="Ружьё">Ружьё</option>
+                                                    <option value="Карабин">Карабин</option>
+                                                    <option value="Револьвер">Револьвер</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label active">ФИО директора соревнования</label>
+                                                <input type="text" placeholder="Директор соревнования"
+                                                    class="form-control" v-model="main_info.director">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label active">ФИО главного судья</label>
+                                                <input type="text" placeholder="Главный судья" class="form-control"
+                                                    v-model="main_info.judje">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label active">Подпись:</label>
+                                                <input type="text" placeholder="Подпись" class="form-control"
+                                                    v-model="main_info.podpis">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Основные данные -->
+
+
+                        <!-- Замысел -->
+                        <div class="modal fade" id="plan_modal" tabindex="-1" role="dialog"
+                            aria-labelledby="plan_modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+                                role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="plan_modalLabel">Данные брифинга упражнения</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="zamisel_app">
+                                            <div class="form-group">
+                                                <label class="form-label active">Наименование упражнения:</label>
+                                                <input type="text" placeholder="Наименование упражнения"
+                                                    class="form-control" v-model="zamisel_info.stage_name">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Тип упражнения</label>
+                                                <select class="custom-select" v-model="zamisel_info.stage_type">
+                                                    <option value="Короткое">Короткое</option>
+                                                    <option value="Среднее">Среднее</option>
+                                                    <option value="Длинное">Длинное</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Положение оружия</label>
+                                                <select class="custom-select" v-model="zamisel_info.stage_gun_position">
+                                                    <option value="Оружие заряжено, патрон в патроннике">Оружие
+                                                        заряжено, патрон в патроннике</option>
+                                                    <option value="оружие заряжено, патрона в патроннике нет">оружие
+                                                        заряжено, патрона в патроннике нет</option>
+                                                    <option value="оружие полностью разряжено">оружие полностью
+                                                        разряжено</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label active">Стартовое положение</label>
+                                                <textarea class="form-control" cols="30" rows="3"
+                                                    placeholder="Стартовая позиция"
+                                                    v-model="zamisel_info.stage_start_position"></textarea>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label active">Процедура выполнения</label>
+                                                <textarea class="form-control" cols="30" rows="3"
+                                                    placeholder="Процедура выполнения"
+                                                    v-model="zamisel_info.stage_procedure"></textarea>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">Угол безопасности</label>
+                                                <select class="custom-select" v-model="zamisel_info.stage_save_angle">
+                                                    <option value="180 градусов">180 градусов</option>
+                                                    <option
+                                                        value="горизонтальный - 180 градусов, вертикальный - по валу">
+                                                        Горизонтальный - 180 градусов, вертикальный - по валу</option>
+                                                    <option value="По вешкам">По вешкам</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Замысел -->
+
+                        <!-- Таблица взаимодействий -->
+                        <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog"
+                            aria-labelledby="contact_modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+                                role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="contact_modalLabel">Судьи</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="contact_table_app">
+
+                                            <table id="contact_table" class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">№</th>
+                                                        <th scope="col">ФИО судьи</th>
+                                                        <th scope="col"> Должность судьи</th>
+                                                        <th scope="col">Дополнительная информация</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="contact_table">
+                                                    <tr v-for="(contact, i) in contact_table" :key='i'>
+                                                        <th scope="row">{{i + 1}}</th>
+                                                        <td><input type="text" class="form-control"
+                                                                placeholder="ФИО судьи" v-model="contact.org_name"></td>
+                                                        <td> <input type="text" class="form-control"
+                                                                placeholder="	Должность судьи" value=""
+                                                                v-model="contact.sign"></td>
+                                                        <td><textarea class="form-control" cols="35" rows="2" value=""
+                                                                placeholder="Дополнительная информация"
+                                                                v-model="contact.info"></textarea></td>
+                                                        <td class="px-0"> <button @click="removeContactById(i)"
+                                                                class="btn btn-danger  px-3">X</button> </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <button class="btn btn-primary" @click="addNewContact()">
+                                                Добавить
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Таблица взаимодействий -->
+
+
+                        <!-- Строевая записка -->
+                        <div class="modal fade" id="new_stroy_modal" tabindex="-1" role="dialog"
+                            aria-labelledby="new_stroy_modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+                                role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="new_stroy_modalLabel">Строевая записка</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- <div class="accordion mb-3" id="new_stroy"> -->
+
+                                        <div id="stroy_table_app">
+
+                                            <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                            <div class="accordion mb-5" id="new_stroy">
+                                                <div class="form-inline">
+                                                    Записать всем стрелкам патроны = 
+                                                    <input type="number" class="form-control" v-model="bullets">
+                                                    <button class="btn btn-primary"
+                                                        @click="setBulletsForAllShooters">Записать</button>
+                                                </div>
+                                                <!-- Подразделение -->
+                                                <div class="card mb-2" v-for="(podrazd, i) in stroy_table">
+                                                    <div class="card-header bg-primary" :id="'new_stroy_heading_'+i">
+                                                        <div class="input-group">
+                                                            <div class="mr-2">{{i+1}}</div>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Подразделение" value=""
+                                                                :aria-describedby="'new_stroy_addon_'+i"
+                                                                v-model="podrazd.podrazd">
+                                                            <div class="input-group-append">
+                                                                <button
+                                                                    class="btn btn-success btn-sm collapsed m-0 ml-3 "
+                                                                    :id="'new_stroy_addon_'+i" type="button"
+                                                                    data-toggle="collapse"
+                                                                    :data-target="'#new_stroy_collaps_'+i"
+                                                                    aria-expanded="true"
+                                                                    :aria-controls="'new_stroy_collaps_'+i">Подробнее</button>
+                                                            </div>
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-danger "
+                                                                    @click="deletPodrazdById(i)">X</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div :id="'new_stroy_collaps_'+i" class="collapse "
+                                                        :aria-labelledby="'new_stroy_heading_'+i"
+                                                        data-parent="#new_stroy">
+                                                        <div class="card-body p-0">
+                                                            <!-- Таблица участников подразделения -->
+                                                            <table class="table table-hover mb-0">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">№</th>
+                                                                        <th scope="col">ФИО участника</th>
+                                                                        <th scope="col">Звание</th>
+                                                                        <th scope="col">Оружие</th>
+                                                                        <th scope="col">Патроны</th>
+                                                                        <th scope="col">Удалить</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr v-for="(shooter, index) in podrazd.shooters">
+                                                                        <th scope="row">{{index+1}}</th>
+                                                                        <td><input type="text" class="form-control"
+                                                                                placeholder="ФИО участника"
+                                                                                v-model="shooter.name"></td>
+                                                                        <td><input type="text" class="form-control"
+                                                                                placeholder="Звание"
+                                                                                v-model="shooter.rank"></td>
+                                                                        <td><input type="text" class="form-control"
+                                                                                placeholder="Оружие"
+                                                                                v-model="shooter.gun"></td>
+                                                                        <td><input type="number"
+                                                                                class="form-control bullet_cont_for_one"
+                                                                                placeholder="Патроны" style="width: 7em"
+                                                                                v-model="shooter.bullets"></td>
+                                                                        <td> <button class="btn btn-danger btn-sm"
+                                                                                @click="deleteItemByPodrazdIdAndItemId(i, index)">X</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <hr>
+                                                            <button class="btn btn-primary waves-effect waves-light"
+                                                                @click="addItemByPodrzdId(i)">Добавить
+                                                                участника</button>
+                                                            <!-- /Таблица участников подразделения -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /Подразделение -->
+
+                                            </div>
+                                            <button class="btn btn-primary waves-effect waves-light"
+                                                @click="addPodrazd">Добавить подразделение</button>
+
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Строевая записка -->
+                        <!-- Метео условия -->
+                        <div class="modal fade" id="meteo_modal" tabindex="-1" role="dialog"
+                            aria-labelledby="meteo_modalLabel" aria-hidden="true">
+                            <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="meteo_modalLabel">Метео условия</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="meteo_app">
+                                            <div class="form-group row">
+                                                <label class="col-7 col-form-label">Температура(°C)</label>
+                                                <div class="col-5">
+                                                    <input v-model="meteo_info.temperature" type="number" value="0"
+                                                        class="form-control">
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-7 col-form-label">Влажность(%)</label>
+                                                <div class="col-5">
+                                                    <input v-model="meteo_info.moisture" type="number" min="0" value="0"
+                                                        class="form-control">
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-7 col-form-label">Давление воздуха</label>
+                                                <div class="col-5">
+                                                    <input v-model="meteo_info.pleasure" type="number" min="0" value="0"
+                                                        class="form-control">
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-7 col-form-label">Скорость ветра(м/с)</label>
+                                                <div class="col-5">
+                                                    <input v-model="meteo_info.wind_speed" type="number" min="0"
+                                                        value="0" class="form-control">
+                                                </div>
+                                                <div class="dropdown-divider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Закрыть</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Метео условия -->
+                    </div>
+                </div>
+                <!-- /Строевая записка + Информация + Замысел + Таблица взаимодействий + Метеоданные -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <section id="dropzone-examples">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <label class="btn btn-outline-primary mb-1  ">
+                                        <input type="file" id="your-files" multiple
+                                            onchange="getMapImageFile(this.files)"
+                                            accept="image/png,image/jpeg" style="display: none;">
+                                           Загрузить изображение карты
+                                    </label>
+                                    <button class="btn btn-outline-danger mb-1"
+                                    onclick="location.reload();">Очистить всё</button>
+                                </div>
+                                <div class="card-body">
+                                    <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
+
+
+                                        <div class="card " style="height: 77vh;">
+
+                                            <div id="map" class="" style="opacity: 90%;">
+                                                <!-- Layer 0 - for map image -->
+                                                <div id="map_image_place">
+                                                    <img class="lazy1" id="map_image">
+                                                </div>
+                                                <!-- /Layer 0 - for map image -->
+
+                                                <!-- Layer 1 - for icons -->
+                                                <div id="icon_place" ondrop="dropCopy(event)"
+                                                    ondragover="allowDrop(event)">
+                                                </div>
+                                                <!-- /Layer 1 - for icons -->
+
+                                                <!-- DRAW -->
+                                                <div class="CanvasContainer">
+                                                    <canvas id="drawingCanvas">
+                                                        <!-- ontouchstart="startDrawing(event)" ontouchmove="draw(event)" ontouchend="stopDrawing()" ontouchleave="stopDrawing()" -->
+                                                    </canvas>
+                                                    <!-- ontouchmove="draw(event)" -->
+                                                </div>
+                                                <!-- / DRAW -->
+
+                                            </div>
+                                            <div id="elementH"></div>
+                                        </div>
+                                        <img id="delete_icon" class="d-flex" src="img/icons/trash.png" alt="Generic placeholder image" ondrop="dropDelete(event)" ondragover="allowDrop(event)">
+                                    </form>
+                                    
+
+
+
+                                    <div class="card-body">
+                                        <div class="col-12">
+                                            <div id="save_to_local">
+                                                <div class="form-inline mr-2">
+                                                    <label style="color:black;"> <b>СОХРАНЕНИЕ</b> <input type="text"
+                                                            :readonly="is_readonly"
+                                                            class="form-control form-control-sm ml-1"
+                                                            v-model='now_save'></label>
+                                                    <button class="btn btn-success"
+                                                        @click="saveToLocalStorage"> Сохранить</button>
+                                                    <!-- <button @click="getFromLocalStorage">Load last</button> -->
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary"
+                                                        data-toggle="modal" data-target="#load_modal"
+                                                        @click="getAllSaves">Загрузить</button>
+                                                    <!-- <button type="button" class="btn btn-secondary btn-sm" @click="testDB2('test')">TEST</button> -->
+                                                </div>
+            
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="load_modal" tabindex="-1"
+                                                    role="dialog" aria-labelledby="load_modal_label"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="load_modal_label">
+                                                                    Список
+                                                                    сохранений</h5>
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                    <span
+                                                                        aria-hidden="true">&times;</span></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p class="text-muted">Выберите сохранение
+                                                                    которое хотите
+                                                                    загрузить</p>
+            
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">#</th>
+                                                                            <th scope="col">Название</th>
+                                                                            <th scope="col">Дата </th>
+                                                                            <th scope="col">Загрузить</th>
+                                                                            <th scope="col">Удалить</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr
+                                                                            v-for="(save_name, i) in savings_names">
+                                                                            <th scope="row">{{i+1}}</th>
+                                                                            <td>{{save_name.name}}</td>
+                                                                            <td>{{save_name.date}}</td>
+                                                                            <td>
+                                                                                <!-- <button class="btn btn-success" @click='getFromLocalStorage(save_name)' data-dismiss="modal"></button> -->
+                                                                                <img src="img/icons/download_icon (2).png"
+                                                                                    alt="" style="width: 34px;"
+                                                                                    @click='getFromLocalStorage(i)'
+                                                                                    data-dismiss="modal"
+                                                                                    class=" p-1">
+                                                                            </td>
+                                                                            <td>
+                                                                                <h3><span
+                                                                                        @click='removeSavingInLocalStorage(i)'>&times;</span>
+                                                                                    </h1>
+                                                                            </td>
+            
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    data-dismiss="modal">Закрыть</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="col-6">
+                                            <!-- create PDF -->
+                                            <!-- <button class="btn btn-dark-green btn-sm" onclick="finalGeneratePDF('A4')">Создать PDF A4</button> -->
+                                            <button class="btn btn-info"
+                                                onclick="finalGeneratePDF('A1')">Создать PDF</button>
+                                            <!-- create PDF -->
+                                            <!-- <button class="btn btn-primary btn-sm" onclick="testStorage()">Test</button> -->
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </div>
+        </div>
+        </div>
+        <!-- END: Content-->
+    
+        <div class="sidenav-overlay"></div>
+        <div class="drag-target"></div>
+
+
+
+
+
+
+
+
+
+
+
+        <script src="app-assets/vendors/js/vendors.min.js"></script>
+        <script src="app-assets/vendors/js/extensions/dropzone.min.js"></script>
+        <script src="app-assets/vendors/js/editors/quill/katex.min.js"></script>
+        <script src="app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+        <script src="app-assets/vendors/js/editors/quill/quill.min.js"></script>
+        <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+        <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <script src="app-assets/vendors/js/extensions/dragula.min.js"></script>
+        <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+        <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+        <script src="app-assets/js/core/app-menu.js"></script>
+        <script src="app-assets/js/core/app.js"></script>
+        <script src="app-assets/js/scripts/pages/app-todo.js"></script>
+        <script src="app-assets/js/scripts/forms/form-file-uploader.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <script src="js/bootstrap4-toggle.min.js"></script>
+        <!-- PDF -->
+        <!-- <script type="text/javascript" src="js/html2canvas.js"></script> -->
+        <script type="text/javascript" src="js/html2canvas.min.js"></script>
+        <!-- jsPDF -->
+        <!-- <script type="text/javascript" src="js/jspdf.min.js"></script> -->
+        <!-- PDF maker -->
+        <script type="text/javascript" src='js/pdfmake.min.js'></script>
+        <script type="text/javascript" src='js/vfs_fonts.js'></script>
+        <!-- Lazy load -->
+        <script src="js/jquery.lazyload.js"></script>
+        <!-- Vue js -->
+        <script type="text/javascript" src='js/vue.js'></script>
+        <!-- <script type="text/javascript" src='js/vue.min.js'></script> -->
+        <!-- app -->
+        <script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+
+</html>
