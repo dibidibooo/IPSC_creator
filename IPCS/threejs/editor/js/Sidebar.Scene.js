@@ -91,9 +91,9 @@ Sidebar.Scene = function ( editor ) {
 	var fogTypeRow = new UI.Row();
 	var fogType = new UI.Select().setOptions( {
 
-		'None': 'Отсутствует',
-		'Fog': 'Линейная',
-		'FogExp2': 'По экспоненте'
+		// 'None': 'Отсутствует',
+		// 'Fog': 'Линейная',
+		// 'FogExp2': 'По экспоненте'
 
 	} ).setWidth( '150px' );
 	fogType.onChange( function () {
@@ -106,9 +106,6 @@ Sidebar.Scene = function ( editor ) {
 	} );
 
 	fogTypeRow.add( new UI.Text( 'Туман' ).setWidth( '90px' ) );
-	fogTypeRow.add( fogType );
-
-	container.add( fogTypeRow );
 
 	// fog color
 
@@ -122,10 +119,7 @@ Sidebar.Scene = function ( editor ) {
 
 	} );
 
-	fogColorRow.add( new UI.Text( 'Цвет тумана' ).setWidth( '90px' ) );
-	fogColorRow.add( fogColor );
 
-	container.add( fogColorRow );
 
 	// fog near
 

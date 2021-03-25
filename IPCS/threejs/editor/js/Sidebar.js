@@ -10,12 +10,12 @@ var Sidebar = function ( editor ) {
 	//
 
 	var sceneTab = new UI.Text( 'СЦЕНА' ).onClick( onClick );
-	var projectTab = new UI.Text( 'ПРОЕКТ' ).onClick( onClick );
+	var projectTab = new UI.Text( '' ).onClick( onClick );
 	var settingsTab = new UI.Text( 'НАСТРОЙКИ' ).onClick( onClick );
 
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
-	tabs.add( sceneTab, projectTab, settingsTab );
+	tabs.add( sceneTab, settingsTab );
 	container.add( tabs );
 
 	function onClick( event ) {

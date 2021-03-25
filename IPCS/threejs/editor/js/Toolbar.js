@@ -42,9 +42,9 @@ var Toolbar = function ( editor ) {
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 		console.log("Screen");
-		var reder_test = document.getElementById("player")
-		var canvas_test = reder_test.getElementsByTagName("canvas")
-		if(canvas_test.length > 0) {
+		// var reder_test = document.getElementById("player")
+		// var canvas_test = reder_test.getElementsByTagName("canvas")
+		// if(canvas_test.length > 0) {
 			// get canvas
 			renderer = new THREE.WebGLRenderer({
 				antialias: true,
@@ -65,9 +65,9 @@ var Toolbar = function ( editor ) {
 			localStorage.setItem("renderImage", myImage);
 			console.log(myImage);
 			document.location.href = "../../init.html";
-		} else {
-			alert("Render scene")
-		}
+		// } else {
+		// 	alert("Render scene")
+		// }
 		// /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	} );
