@@ -160,7 +160,7 @@
                 <div class="add-task">
                     <button type="button" class="btn btn-primary btn-block menu-title text-truncate" data-toggle="modal"
                         data-target="#contact_modal">
-                        Судьи
+                        Руководитель стрельб
                     </button>
                 </div><br>
                 <div class="add-task">
@@ -176,6 +176,7 @@
                     </button>
                 </div>
 
+               
 
 
 
@@ -260,7 +261,7 @@
                         <!-- Основные данные -->
                         <div class="modal fade" id="main_info_modal" tabindex="-1" role="dialog"
                             aria-labelledby="main_info_modalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                            <div class="modal-dialog  modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="main_info_modalLabel">Данные турнира</h5>
@@ -318,13 +319,13 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="form-label active">ФИО директора соревнования</label>
-                                                <input type="text" placeholder="Директор соревнования"
+                                                <label class="form-label active">Старший руководитель стрельб</label>
+                                                <input type="text" placeholder="Старший руководитель стрельб"
                                                     class="form-control" v-model="main_info.director">
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label active">ФИО главного судья</label>
-                                                <input type="text" placeholder="Главный судья" class="form-control"
+                                                <label class="form-label active">Руководитель стрельб</label>
+                                                <input type="text" placeholder="Руководитель стрельб" class="form-control"
                                                     v-model="main_info.judje">
                                             </div>
 
@@ -349,8 +350,7 @@
                         <!-- Замысел -->
                         <div class="modal fade" id="plan_modal" tabindex="-1" role="dialog"
                             aria-labelledby="plan_modalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
-                                role="document">
+                            <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="plan_modalLabel">Данные брифинга упражнения</h5>
@@ -424,11 +424,11 @@
                         <!-- Таблица взаимодействий -->
                         <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog"
                             aria-labelledby="contact_modalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
                                 role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="contact_modalLabel">Судьи</h5>
+                                        <h5 class="modal-title" id="contact_modalLabel">Руководитель стрельб</h5>
                                         <button type="button" class="close" data-dismiss="modal"
                                             aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
@@ -439,8 +439,8 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">№</th>
-                                                        <th scope="col">ФИО судьи</th>
-                                                        <th scope="col"> Должность судьи</th>
+                                                        <th scope="col">Руководитель стрельб</th>
+                                                        <th scope="col"> Должность руководителя стрельб</th>
                                                         <th scope="col">Дополнительная информация</th>
                                                         <th scope="col"></th>
                                                     </tr>
@@ -449,9 +449,9 @@
                                                     <tr v-for="(contact, i) in contact_table" :key='i'>
                                                         <th scope="row">{{i + 1}}</th>
                                                         <td><input type="text" class="form-control"
-                                                                placeholder="ФИО судьи" v-model="contact.org_name"></td>
+                                                                placeholder="Руководитель стрельб" v-model="contact.org_name"></td>
                                                         <td> <input type="text" class="form-control"
-                                                                placeholder="	Должность судьи" value=""
+                                                                placeholder="Должность" value=""
                                                                 v-model="contact.sign"></td>
                                                         <td><textarea class="form-control" cols="35" rows="2" value=""
                                                                 placeholder="Дополнительная информация"
@@ -480,7 +480,7 @@
                         <!-- Строевая записка -->
                         <div class="modal fade" id="new_stroy_modal" tabindex="-1" role="dialog"
                             aria-labelledby="new_stroy_modalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
                                 role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -496,7 +496,7 @@
                                             <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                             <div class="accordion mb-5" id="new_stroy">
                                                 <div class="form-inline">
-                                                    Записать всем стрелкам патроны = 
+                                                    Записать всем стрелкам патроны =
                                                     <input type="number" class="form-control" v-model="bullets">
                                                     <button class="btn btn-primary"
                                                         @click="setBulletsForAllShooters">Записать</button>
@@ -641,39 +641,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /Метео условия -->
                     </div>
                 </div>
                 <!-- /Строевая записка + Информация + Замысел + Таблица взаимодействий + Метеоданные -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -693,12 +663,17 @@
                                 <div class="card-header">
                                     <label class="btn btn-outline-primary mb-1  ">
                                         <input type="file" id="your-files" multiple
-                                            onchange="getMapImageFile(this.files)"
-                                            accept="image/png,image/jpeg" style="display: none;">
-                                           Загрузить изображение карты
+                                            onchange="getMapImageFile(this.files)" accept="image/png,image/jpeg"
+                                            style="display: none;">
+                                        Загрузить изображение карты
                                     </label>
-                                    <button class="btn btn-outline-danger mb-1"
-                                    onclick="location.reload();">Очистить всё</button>
+
+
+
+
+
+
+                                    <button class="btn btn-outline-danger mb-1" onclick="location.reload();">Очистить всё</button>
                                 </div>
                                 <div class="card-body">
                                     <form action="#" class="dropzone dropzone-area" id="dpz-single-file">
@@ -731,9 +706,8 @@
                                             </div>
                                             <div id="elementH"></div>
                                         </div>
-                                        <img id="delete_icon" class="d-flex" src="img/icons/trash.png" alt="Generic placeholder image" ondrop="dropDelete(event)" ondragover="allowDrop(event)">
                                     </form>
-                                    
+
 
 
 
@@ -745,36 +719,34 @@
                                                             :readonly="is_readonly"
                                                             class="form-control form-control-sm ml-1"
                                                             v-model='now_save'></label>
-                                                    <button class="btn btn-success"
-                                                        @click="saveToLocalStorage"> Сохранить</button>
+                                                    <button class="btn btn-success" @click="saveToLocalStorage">
+                                                        Сохранить</button>
                                                     <!-- <button @click="getFromLocalStorage">Load last</button> -->
                                                     <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary"
-                                                        data-toggle="modal" data-target="#load_modal"
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                        data-target="#load_modal"
                                                         @click="getAllSaves">Загрузить</button>
                                                     <!-- <button type="button" class="btn btn-secondary btn-sm" @click="testDB2('test')">TEST</button> -->
                                                 </div>
-            
+
                                                 <!-- Modal -->
-                                                <div class="modal fade" id="load_modal" tabindex="-1"
-                                                    role="dialog" aria-labelledby="load_modal_label"
-                                                    aria-hidden="true">
+                                                <div class="modal fade" id="load_modal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="load_modal_label" aria-hidden="true">
                                                     <div class="modal-dialog modal-lg">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h5 class="modal-title" id="load_modal_label">
                                                                     Список
                                                                     сохранений</h5>
-                                                                <button type="button" class="close"
-                                                                    data-dismiss="modal" aria-label="Close">
-                                                                    <span
-                                                                        aria-hidden="true">&times;</span></button>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span></button>
                                                             </div>
                                                             <div class="modal-body">
                                                                 <p class="text-muted">Выберите сохранение
                                                                     которое хотите
                                                                     загрузить</p>
-            
+
                                                                 <table class="table">
                                                                     <thead>
                                                                         <tr>
@@ -786,8 +758,7 @@
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
-                                                                        <tr
-                                                                            v-for="(save_name, i) in savings_names">
+                                                                        <tr v-for="(save_name, i) in savings_names">
                                                                             <th scope="row">{{i+1}}</th>
                                                                             <td>{{save_name.name}}</td>
                                                                             <td>{{save_name.date}}</td>
@@ -796,15 +767,14 @@
                                                                                 <img src="img/icons/download_icon (2).png"
                                                                                     alt="" style="width: 34px;"
                                                                                     @click='getFromLocalStorage(i)'
-                                                                                    data-dismiss="modal"
-                                                                                    class=" p-1">
+                                                                                    data-dismiss="modal" class=" p-1">
                                                                             </td>
                                                                             <td>
                                                                                 <h3><span
                                                                                         @click='removeSavingInLocalStorage(i)'>&times;</span>
                                                                                     </h1>
                                                                             </td>
-            
+
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
@@ -818,11 +788,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                            <div class="col-6">
+                                        <div class="col-6">
                                             <!-- create PDF -->
                                             <!-- <button class="btn btn-dark-green btn-sm" onclick="finalGeneratePDF('A4')">Создать PDF A4</button> -->
-                                            <button class="btn btn-info"
-                                                onclick="finalGeneratePDF('A1')">Создать PDF</button>
+                                            <button class="btn btn-info" onclick="finalGeneratePDF('A1')">Создать
+                                                PDF</button>
                                             <!-- create PDF -->
                                             <!-- <button class="btn btn-primary btn-sm" onclick="testStorage()">Test</button> -->
                                         </div>
@@ -841,11 +811,10 @@
 
             </div>
         </div>
-        </div>
-        <!-- END: Content-->
-    
-        <div class="sidenav-overlay"></div>
-        <div class="drag-target"></div>
+    </div>
+    <!-- END: Content-->
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
 
 
 
@@ -857,20 +826,24 @@
 
 
 
-        <script src="app-assets/vendors/js/vendors.min.js"></script>
-        <script src="app-assets/vendors/js/extensions/dropzone.min.js"></script>
-        <script src="app-assets/vendors/js/editors/quill/katex.min.js"></script>
-        <script src="app-assets/vendors/js/editors/quill/highlight.min.js"></script>
-        <script src="app-assets/vendors/js/editors/quill/quill.min.js"></script>
-        <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-        <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-        <script src="app-assets/vendors/js/extensions/dragula.min.js"></script>
-        <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
-        <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
-        <script src="app-assets/js/core/app-menu.js"></script>
-        <script src="app-assets/js/core/app.js"></script>
-        <script src="app-assets/js/scripts/pages/app-todo.js"></script>
-        <script src="app-assets/js/scripts/forms/form-file-uploader.js"></script>
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/dropzone.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/quill.min.js"></script>
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/dragula.min.js"></script>
+    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <script src="app-assets/js/scripts/pages/app-todo.js"></script>
+    <script src="app-assets/js/scripts/forms/form-file-uploader.js"></script>
+
+    <script src="app-assets/js/scripts/extensions/ext-component-sliders.js"></script>
+    <script src="app-assets/vendors/js/extensions/wNumb.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/nouislider.min.js"></script>
 
 
 
@@ -886,28 +859,27 @@
 
 
 
-
-        <!-- Bootstrap -->
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/popper.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/mdb.min.js"></script>
-        <script src="js/bootstrap4-toggle.min.js"></script>
-        <!-- PDF -->
-        <!-- <script type="text/javascript" src="js/html2canvas.js"></script> -->
-        <script type="text/javascript" src="js/html2canvas.min.js"></script>
-        <!-- jsPDF -->
-        <!-- <script type="text/javascript" src="js/jspdf.min.js"></script> -->
-        <!-- PDF maker -->
-        <script type="text/javascript" src='js/pdfmake.min.js'></script>
-        <script type="text/javascript" src='js/vfs_fonts.js'></script>
-        <!-- Lazy load -->
-        <script src="js/jquery.lazyload.js"></script>
-        <!-- Vue js -->
-        <script type="text/javascript" src='js/vue.js'></script>
-        <!-- <script type="text/javascript" src='js/vue.min.js'></script> -->
-        <!-- app -->
-        <script type="text/javascript" src="js/script.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/bootstrap4-toggle.min.js"></script>
+    <!-- PDF -->
+    <!-- <script type="text/javascript" src="js/html2canvas.js"></script> -->
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <!-- jsPDF -->
+    <!-- <script type="text/javascript" src="js/jspdf.min.js"></script> -->
+    <!-- PDF maker -->
+    <script type="text/javascript" src='js/pdfmake.min.js'></script>
+    <script type="text/javascript" src='js/vfs_fonts.js'></script>
+    <!-- Lazy load -->
+    <script src="js/jquery.lazyload.js"></script>
+    <!-- Vue js -->
+    <script type="text/javascript" src='js/vue.js'></script>
+    <!-- <script type="text/javascript" src='js/vue.min.js'></script> -->
+    <!-- app -->
+    <script type="text/javascript" src="js/script.js"></script>
 
 
 </body>

@@ -109,11 +109,15 @@ Sidebar.Object = function ( editor ) {
 	// position
 
 	var objectPositionRow = new UI.Row();
-	var objectPositionX = new UI.Number().setWidth( '50px' ).onChange( update );
-	var objectPositionY = new UI.Number().setWidth( '50px' ).onChange( update );
-	var objectPositionZ = new UI.Number().setWidth( '50px' ).onChange( update );
 
-	objectPositionRow.add( new UI.Text( 'Позиция' ).setWidth( '90px' ) );
+	objectPositionRow.add( new UI.Text( 'х' ).setWidth( '50px' ).setMarginLeft('105px') );
+	var objectPositionX = new UI.Number().setWidth( '40px' ).onChange( update );
+	objectPositionRow.add( new UI.Text( 'y' ).setWidth( '50px' ) );
+	var objectPositionY = new UI.Number().setWidth( '40px' ).onChange( update );
+	objectPositionRow.add( new UI.Text( 'z' ).setWidth( '50px' ) );
+	var objectPositionZ = new UI.Number().setWidth( '40px' ).onChange( update );
+	
+	objectPositionRow.add( new UI.Text( 'Позиция' ).setWidth( '90px' ) );	
 	objectPositionRow.add( objectPositionX, objectPositionY, objectPositionZ );
 
 	container.add( objectPositionRow );
@@ -121,9 +125,12 @@ Sidebar.Object = function ( editor ) {
 	// rotation
 
 	var objectRotationRow = new UI.Row();
-	var objectRotationX = new UI.Number().setWidth( '50px' ).onChange( update );
-	var objectRotationY = new UI.Number().setWidth( '50px' ).onChange( update );
-	var objectRotationZ = new UI.Number().setWidth( '50px' ).onChange( update );
+	objectRotationRow.add( new UI.Text( 'x' ).setWidth( '50px' ).setMarginLeft('105px') );
+	var objectRotationX = new UI.Number().setWidth( '40px' ).onChange( update );
+	objectRotationRow.add( new UI.Text( 'y' ).setWidth( '50px' ) );
+	var objectRotationY = new UI.Number().setWidth( '40px' ).onChange( update );
+	objectRotationRow.add( new UI.Text( 'z' ).setWidth( '50px' ) );
+	var objectRotationZ = new UI.Number().setWidth( '40px' ).onChange( update );
 
 	objectRotationRow.add( new UI.Text( 'Вращение' ).setWidth( '90px' ) );
 	objectRotationRow.add( objectRotationX, objectRotationY, objectRotationZ );
@@ -134,8 +141,11 @@ Sidebar.Object = function ( editor ) {
 
 	var objectScaleRow = new UI.Row();
 	var objectScaleLock = new UI.Checkbox( true ).setPosition( 'absolute' ).setLeft( '75px' );
+	objectScaleRow.add( new UI.Text( 'x' ).setWidth( '50px' ).setMarginLeft('105px') );
 	var objectScaleX = new UI.Number( 1 ).setRange( 0.01, Infinity ).setWidth( '50px' ).onChange( updateScaleX );
+	objectScaleRow.add( new UI.Text( 'y' ).setWidth( '50px' ) );
 	var objectScaleY = new UI.Number( 1 ).setRange( 0.01, Infinity ).setWidth( '50px' ).onChange( updateScaleY );
+	objectScaleRow.add( new UI.Text( 'z' ).setWidth( '50px' ) );
 	var objectScaleZ = new UI.Number( 1 ).setRange( 0.01, Infinity ).setWidth( '50px' ).onChange( updateScaleZ );
 
 	objectScaleRow.add( new UI.Text( 'Масштаб' ).setWidth( '90px' ) );

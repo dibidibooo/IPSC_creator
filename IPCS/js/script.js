@@ -450,7 +450,7 @@ var contact_table_app = new Vue({
         },
         getCotnactTableForPDF: function() {
             var result_table = [
-                ['№', 'ФИО судьи', 'Должность судьи', 'Дополнительная информация'],
+                ['№', 'Руководитель стрельб', 'Должность руководителя стрельб', 'Дополнительная информация'],
             ]
             var i = 1;
             for (var contact of this.contact_table) {
@@ -1015,7 +1015,7 @@ function downloadPDF_A1(canvasData) {
                     // text: 'First column',
                     table: {
                         widths: ['100%'],
-                        heights: [300, 300, 560],
+                        heights: [100, 300, 1220],
                         body: [
                             // ["Метеоданные:"],
                             [{
@@ -1076,8 +1076,8 @@ function downloadPDF_A1(canvasData) {
                                     "Место проведения турнира: " + main_info_app.main_info.location + "\n" +
                                     "Уровень турнира: " + main_info_app.main_info.match_level + "\n" +
                                     "Оружие: " + main_info_app.main_info.gun + "\n" +
-                                    "ФИО директора соревнования: " + main_info_app.main_info.director + "\n" +
-                                    "ФИО главного судья: " + main_info_app.main_info.judje + "\n" +
+                                    "Старший руководитель стрельб: " + main_info_app.main_info.director + "\n" +
+                                    "Руководитель стрельб: " + main_info_app.main_info.judje + "\n" +
                                     "",
                             }],
 
@@ -1100,7 +1100,7 @@ function downloadPDF_A1(canvasData) {
                                 image: canvasData,
                                 width: 1630,
                                 // margin: [0, 50, 0, 50]
-                                // height: 300
+                                // height: 1300,
                             }],
                             [{ text: main_info_app.main_info.podpis + " __________/______________/__________", fontSize: 20 }],
                         ]
@@ -1131,7 +1131,7 @@ function downloadPDF_A1(canvasData) {
                                 layout: 'noBorders',
                                 table: {
                                     widths: ["15%", '85%'],
-                                    heights: [1000],
+                                    heights: [1430],
                                     body: iconsBody,
                                 },
                                 layout: borderOnOff
@@ -1186,8 +1186,8 @@ function downloadPDF_A4(canvasData) {
                                 "Место проведения турнира: " + main_info_app.main_info.location + "\n" +
                                 "Уровень турнира: " + main_info_app.main_info.match_level + "\n" +
                                 "Оружие: " + main_info_app.main_info.gun + "\n" +
-                                "ФИО директора соревнования: " + main_info_app.main_info.director + "\n" +
-                                "ФИО главного судья: " + main_info_app.main_info.judje + "\n" +
+                                "Старший руководитель стрельб: " + main_info_app.main_info.director + "\n" +
+                                "Руководитель стрельб: " + main_info_app.main_info.judje + "\n" +
                                 "",
                         }],
 

@@ -1,0 +1,194 @@
+solid AssimpScene
+ facet normal 0 0 -1
+  outer loop
+  vertex -75 -0.5 0
+  vertex -75 0.5 0
+  vertex 75 0.5 0
+  endloop
+ endfacet
+
+ facet normal 0 0 -1
+  outer loop
+  vertex -75 -0.5 0
+  vertex 75 0.5 0
+  vertex 75 -0.5 0
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
+  vertex -75 -0.5 80
+  vertex 75 -0.5 80
+  vertex 75 0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
+  vertex -75 -0.5 80
+  vertex 75 0.5 80
+  vertex -75 0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 -1 0
+  outer loop
+  vertex -75 -0.5 0
+  vertex 75 -0.5 0
+  vertex 75 -0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 -1 0
+  outer loop
+  vertex -75 -0.5 0
+  vertex 75 -0.5 80
+  vertex -75 -0.5 80
+  endloop
+ endfacet
+
+ facet normal 1 0 0
+  outer loop
+  vertex 75 -0.5 0
+  vertex 75 0.5 0
+  vertex 75 0.5 80
+  endloop
+ endfacet
+
+ facet normal 1 0 0
+  outer loop
+  vertex 75 -0.5 0
+  vertex 75 0.5 80
+  vertex 75 -0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 1 0
+  outer loop
+  vertex 75 0.5 0
+  vertex -75 0.5 0
+  vertex -75 0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 1 0
+  outer loop
+  vertex 75 0.5 0
+  vertex -75 0.5 80
+  vertex 75 0.5 80
+  endloop
+ endfacet
+
+ facet normal -1 0 0
+  outer loop
+  vertex -75 0.5 0
+  vertex -75 -0.5 0
+  vertex -75 -0.5 80
+  endloop
+ endfacet
+
+ facet normal -1 0 0
+  outer loop
+  vertex -75 0.5 0
+  vertex -75 -0.5 80
+  vertex -75 0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 0 -1
+  outer loop
+  vertex -75 -0.5 80
+  vertex -75 0.5 80
+  vertex 75 0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 0 -1
+  outer loop
+  vertex -75 -0.5 80
+  vertex 75 0.5 80
+  vertex 75 -0.5 80
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
+  vertex -45 -0.5 110
+  vertex 45 -0.5 110
+  vertex 45 0.5 110
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
+  vertex -45 -0.5 110
+  vertex 45 0.5 110
+  vertex -45 0.5 110
+  endloop
+ endfacet
+
+ facet normal 0 -1 0
+  outer loop
+  vertex -75 -0.5 80
+  vertex 75 -0.5 80
+  vertex 45 -0.5 110
+  endloop
+ endfacet
+
+ facet normal 0 -1 0
+  outer loop
+  vertex -75 -0.5 80
+  vertex 45 -0.5 110
+  vertex -45 -0.5 110
+  endloop
+ endfacet
+
+ facet normal 0.70710677 0 0.70710677
+  outer loop
+  vertex 75 -0.5 80
+  vertex 75 0.5 80
+  vertex 45 0.5 110
+  endloop
+ endfacet
+
+ facet normal 0.70710677 0 0.70710677
+  outer loop
+  vertex 75 -0.5 80
+  vertex 45 0.5 110
+  vertex 45 -0.5 110
+  endloop
+ endfacet
+
+ facet normal 0 1 0
+  outer loop
+  vertex 75 0.5 80
+  vertex -75 0.5 80
+  vertex -45 0.5 110
+  endloop
+ endfacet
+
+ facet normal 0 1 0
+  outer loop
+  vertex 75 0.5 80
+  vertex -45 0.5 110
+  vertex 45 0.5 110
+  endloop
+ endfacet
+
+ facet normal -0.70710677 0 0.70710677
+  outer loop
+  vertex -75 0.5 80
+  vertex -75 -0.5 80
+  vertex -45 -0.5 110
+  endloop
+ endfacet
+
+ facet normal -0.70710677 0 0.70710677
+  outer loop
+  vertex -75 0.5 80
+  vertex -45 -0.5 110
+  vertex -45 0.5 110
+  endloop
+ endfacet
+
+endsolidAssimpScene
